@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142504360-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-142504360-2');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="The number one source or all things Trending on Tik Tok. Helps you to discover top hashtags, top videos, popular creators, and apparel.">
+    <title>My Lost Sock</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light bg-primary navbarStyle">
+    <a class="navbar-brand" href="index.html">My Lost Sock</a>
+    <a class="navbar-brand" href="story.html">Our Story</a>
+
+
+</nav>
+
+<div class="container homeContainer">
+    <br>
+    <br>
+    <h1>My Lost Sock</h1>
+    <h4>Wow! You actually made it here. This was supposed to be a complete joke, but whatever.</h4>
+    <br>
+    <h4>This sock is great way to reunite your friends, family, or loved ones with their lost sock.</h4>
+    <br>
+    <h4>Yup... That's really the whole idea. If this takes off we'll honestly be surprised.</h4>
+    <br>
+</div>
+
+<img src="mlsbgNew.png" alt="">
+
+<div id="paypal-button-container"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AY1r2QEMf6dcO7XMnw1YxjuUqCMLC9N2MKZTVtDohpHrsjlihC32tmqtH-JSwYspRrzjFPJuscilYfeQ&currency=USD"></script>
+<script>
+    paypal.Buttons({
+        style: {
+            shape: 'rect',
+            color: 'gold',
+            layout: 'vertical',
+            label: 'paypal',
+
+        },
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '1'
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+            });
+        }
+    }).render('#paypal-button-container');
+</script>
+
+<div class="container bottomContainer">
+    <h4> Almost forgot. If you get sent a sock, snap a picture with you wearing it and tag us on social media. Please, we need likes for our self-esteem.</h4>
+
+     <h4>#thereallostsock</h4>
+
+    <h4>Follow us on Instagram</h4>
+
+    <h4><a href="https://www.instagram.com/thereallostsock/" target="_blank">@thereallostsock</a></h4>
+
+    <h4>Follow us on Facebook</h4>
+
+    <h4><a href="https://www.facebook.com/thereallostsock/" target="_blank">My Lost Sock</a></h4>
+
+    <h4>Just look for the profile with neon green sock as the photo.</h4>
+
+</div>
+
+
+</body>
+</html>
